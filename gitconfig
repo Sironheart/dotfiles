@@ -1,0 +1,19 @@
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGXksy6MukTkczCaGgSwF9DK/7qRdHB93LynQ5DNihoU
+	name = Beisenherz, Steffen [CBC]
+	email = steffen.beisenherz@rtl.de
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

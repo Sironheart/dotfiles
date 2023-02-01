@@ -1,0 +1,6 @@
+{
+  "gitconfig": "~/.gitconfig",
+  "gitignore": "~/.gitignore",
+  "docker.json": "~/.docker/config.json",
+  "ssh/config": "~/.ssh/config"
+}
