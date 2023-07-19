@@ -1,5 +1,0 @@
-{
-  ".gitconfig": "~/.gitconfig",
-  ".gitignore": "~/.gitignore",
-  "docker.json": "~/.docker/config.json"
-}

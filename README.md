@@ -1,3 +1,3 @@
-# My dotfiles
+# Dotfiles
 
-Uses [rhysd/dotfiles](https://github.com/rhysd/dotfiles) for managing the files
+These are my personal dotfiles. Uses `yadm`
