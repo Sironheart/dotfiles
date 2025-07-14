@@ -1,0 +1,35 @@
+[init]
+	defaultBranch = "main"
+
+[commit]
+	gpgsign = true
+	verbose = false
+
+[fetch]
+	prune = true
+
+[gpg]
+	format = "ssh"
+
+[gpg "ssh"]
+  {{ if eq .chezmoi.os "darwin" -}}
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  {{ else -}}
+  program = "/opt/1Password/op-ssh-sign"
+  {{- end }}
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = "upstream"
+
+[rebase]
+	autoStash = true
+
+[tag]
+	gpgsign = true
+
+[user]
+	name = "Steffen Beisenherz"

@@ -1,0 +1,11 @@
+{{ if stat (joinPath .chezmoi.homeDir ".orbstack") -}}
+Include ~/.orbstack/ssh/config
+{{- end }}
+
+Host *
+	IdentityAgent {{ .ssh.agent_path | quote }}
+	ServerAliveInterval 3600
+	SetEnv TERM=xterm-256color
+	ForwardAgent yes
+	AddKeysToAgent no
+	Compression yes

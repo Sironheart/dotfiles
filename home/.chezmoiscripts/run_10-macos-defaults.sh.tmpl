@@ -1,0 +1,35 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+defaults write NSGlobalDomain "AppleInterfaceStyle" -string "Dark"
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
+defaults write NSGlobalDomain "NSAutomaticCapitalizationEnabled" -bool "false"
+defaults write NSGlobalDomain "NSAutomaticCapitalizationEnabled" -bool "false"
+defaults write NSGlobalDomain "NSAutomaticDashSubstitutionEnabled" -bool "false"
+defaults write NSGlobalDomain "NSAutomaticPeriodSubstitutionEnabled" -bool "false"
+defaults write NSGlobalDomain "NSAutomaticQuoteSubstitutionEnabled" -bool "false"
+defaults write NSGlobalDomain "NSAutomaticSpellingCorrectionEnabled" -bool "false"
+defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1"
+defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool false
+defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "2"
+defaults write com.apple.CloudSubscriptionFeatures.optIn "545129924" -bool "false"
+defaults write com.apple.HIToolbox AppleFnUsageType -int "0"
+defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true"
+defaults write com.apple.TextEdit "SmartQuotes" -bool "false"
+defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "mineffect" -string "scale"
+defaults write com.apple.dock "show-recents" -bool "false"
+defaults write com.apple.finder "AppleShowAllExtensions" -bool "true"
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+
+# kill the programs at the end to get values into effect
+killall Dock
+killall Finder
+killall Safari | true
+killall TextEdit | true
+{{- end -}}

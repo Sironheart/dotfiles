@@ -1,0 +1,44 @@
+{{- if contains .workspace "work" }}
+function create-mr
+    glab mr create --yes --remove-source-branch -a {{ .git.gitlab_user | quote }} -d "" -t "$(git rev-parse --abbrev-ref HEAD | awk 'BEGIN {
+     FS="/";
+     OFS=":";
+    }{
+        // prevent trailing ":" when there is only one part
+        if(NF == 1) {
+            OFS = ""
+        }
+        # If part before `/` is no issue format, we do not write it in upper case
+        if($1 !~ /^[a-z]+-[0-9]+(-[a-z]+-[0-9]+)*$/) {
+            gsub(/-/," ",$0);  # Replace dash with space after colon
+            if(NF > 1) {
+                $2 = " " $2
+            }
+            print $0
+            exit
+        }
+
+        # Transforms `pspdx-123-pspdx22` to `PSPDX-123-PSPDX-22`
+        issuePartAllUpper = toupper($1);
+        split(issuePartAllUpper, splitPart, "-");  # Split part before colon into array a
+
+        # Transforms `PSPDX-123-PSPDX-22` to `PSPDX-123 PSPDX-22`
+        cnt = 0;
+        newIssuePart = splitPart[1]
+        for(i=2; i<=length(splitPart); i++){
+            cnt++;
+            if (cnt % 2 == 0)  # If counter is even append with space
+                newIssuePart = newIssuePart " " splitPart[i];
+            else  # Else append with dash
+                newIssuePart = newIssuePart "-" splitPart[i];
+        }
+        $1 = newIssuePart;
+
+        # Transforms `some-branch-description` to `some branch description`
+        gsub(/-/," ",$2);  # Replace dash with space after colon
+        $2 = " " $2
+
+        print $0  # Print the whole line
+    }')" $argv
+end
+{{- end }}

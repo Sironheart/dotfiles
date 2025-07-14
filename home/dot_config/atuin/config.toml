@@ -1,0 +1,7 @@
+dialect = "uk"
+history_filter = ["token"]
+inline_height = 20
+keymap_mode = "vim-insert"
+show_preview = true
+style = "compact"
+update_check = false

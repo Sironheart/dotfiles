@@ -1,0 +1,7 @@
+[[ssh-keys]]
+vault = "Personal"
+
+{{- if contains .workspace "work" }}
+[[ssh-keys]]
+vault = "Work"
+{{- end }}

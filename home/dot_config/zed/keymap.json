@@ -1,0 +1,36 @@
+[
+  {
+    "bindings": {
+      "cmd-o": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-~": null,
+      "ctrl-`": null
+    }
+  },
+  {
+    "context": "Editor && edit_prediction && !showing_completions",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-y": "editor::AcceptPartialEditPrediction",
+      "ctrl-e": "editor::ToggleEditPrediction",
+      "tab": null
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "use_key_equivalents": true,
+    "bindings": {
+      "enter": null
+    }
+  }
+]

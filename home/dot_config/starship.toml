@@ -1,0 +1,28 @@
+[aws]
+disabled = true
+
+[cmake]
+disabled = true
+
+[cmd_duration]
+min_time = 100
+show_milliseconds = true
+
+[directory]
+truncate_to_repo = false
+truncation_length = 999
+
+[docker_context]
+disabled = true
+
+[env_var]
+disabled = true
+
+[gradle]
+disabled = true
+
+[package]
+disabled = true
+
+[status]
+disabled = false

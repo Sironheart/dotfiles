@@ -1,0 +1,23 @@
+{{- $setup_choice := list "private" "work" -}}
+{{- $workspace := promptChoiceOnce . "workspace" "Setup?" $setup_choice "private" -}}
+
+{{- $sshAgentPath := "" -}}
+{{- if eq .chezmoi.os "darwin" -}}{{- $sshAgentPath = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" -}}
+{{- else -}}{{- $sshAgentPath = "~/.1password/agent.sock" -}}{{- end -}}
+---
+format: yaml
+progress: true
+
+data:
+  workspace: {{ $workspace }}
+
+  git:
+    name: Steffen Beisenherz
+    {{- if contains $workspace "work" }}
+    gitlab_user: beisenherz
+    {{- else }}
+    gitlab_user: sironheart
+    {{- end }}
+
+  ssh:
+    agent_path: {{ $sshAgentPath }}

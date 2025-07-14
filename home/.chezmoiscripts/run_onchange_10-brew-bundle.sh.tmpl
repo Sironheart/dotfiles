@@ -1,0 +1,73 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
+tap "homebrew/cask"
+tap "azure/kubelogin"
+
+brew "atuin"
+brew "awscli"
+brew "bat"
+brew "eza"
+brew "fd"
+brew "ffmpeg"
+brew "fish"
+brew "gnupg"
+brew "jq"
+brew "just"
+brew "lazygit"
+brew "mise"
+brew "ripgrep"
+brew "starship"
+brew "zoxide"
+
+# kubernetes
+brew "fzf"
+brew "helm"
+brew "kubectl"
+brew "k9s"
+
+# work
+brew "Azure/kubelogin/kubelogin"
+
+# languages
+brew "composer"
+brew "go"
+brew "node@22"
+brew "php"
+brew "pnpm"
+brew "rustup"
+
+# random stuff
+# brew "font-geist-mono"
+
+# needed for nvim
+brew "gh"
+brew "glab"
+brew "imagemagick"
+brew "neovim"
+brew "pinentry-mac" if OS.mac?
+brew "pipx"
+brew "pulumi"
+brew "wget"
+
+cask "1password"
+cask "1password-cli"
+cask "brave-browser"
+cask "discord"
+cask "elgato-camera-hub"
+cask "elgato-stream-deck"
+cask "ghostty"
+cask "jordanbaird-ice"
+cask "logi-options+"
+cask "notion"
+cask "obs"
+cask "obsidian"
+cask "raycast"
+cask "spotify"
+# cask "tailscale"
+cask "zed"
+
+# mas "1Password for Safari", id: 1569813296
+# mas "AdGuard for Safari", id: 1440147259
+EOF
+{{- end -}}
