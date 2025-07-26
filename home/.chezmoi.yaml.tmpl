@@ -1,5 +1,6 @@
 {{- $setup_choice := list "private" "work" -}}
 {{- $workspace := promptChoiceOnce . "workspace" "Setup?" $setup_choice "private" -}}
+{{- $email := promptStringOnce . "git email" "What is the mail you want to use for git?" -}}
 
 {{- $sshAgentPath := "" -}}
 {{- if eq .chezmoi.os "darwin" -}}{{- $sshAgentPath = "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" -}}
@@ -8,11 +9,16 @@
 format: yaml
 progress: true
 
+diff:
+  exclude:
+    - scripts
+
 data:
   workspace: {{ $workspace }}
 
   git:
     name: Steffen Beisenherz
+    email: {{ $email }}
     {{- if contains $workspace "work" }}
     gitlab_user: beisenherz
     {{- else }}

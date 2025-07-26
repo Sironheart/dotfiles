@@ -1,7 +1,6 @@
-.config/nvim:
+projects/github.com/sironheart/neovim-config:
   type: "git-repo"
   url: "git@github.com:Sironheart/neovim-config.git"
-  refreshPeriod: "168h"
 
 # .config/fish/conf.d/autopair.fish:
 #   type: file

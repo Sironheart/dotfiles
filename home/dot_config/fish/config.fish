@@ -61,3 +61,7 @@ set -gx EDITOR 'nvim'
 set -gx LANG 'en_US.UTF-8'
 set -gx LC_ALL 'en_US.UTF-8'
 set -gx LC_CTYPE 'en_US.UTF-8'
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :

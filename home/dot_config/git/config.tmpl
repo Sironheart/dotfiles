@@ -5,6 +5,9 @@
 	gpgsign = true
 	verbose = false
 
+[rerere]
+	enabled = true
+
 [fetch]
 	prune = true
 
@@ -33,3 +36,5 @@
 
 [user]
 	name = "Steffen Beisenherz"
+	email = {{ .git.email | quote }}
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGXksy6MukTkczCaGgSwF9DK/7qRdHB93LynQ5DNihoU
