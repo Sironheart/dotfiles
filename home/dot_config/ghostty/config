@@ -1,6 +1,6 @@
-font-family = Geist Mono
+font-family = JetBrainsMono NFM Regular
 font-size = 14
-theme = flexoki-dark
+theme = Flexoki Dark
 
 # macos-non-native-fullscreen = visible-menu
 macos-option-as-alt = true
