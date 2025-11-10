@@ -1,5 +1,6 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
+
 brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
 tap "homebrew/cask"
 tap "azure/kubelogin"
@@ -27,10 +28,12 @@ brew "zoxide"
 brew "fzf"
 brew "helm"
 brew "kubectl"
+brew "kubectl-cnpg"
 brew "k9s"
 
 # work
 brew "Azure/kubelogin/kubelogin"
+brew "multi-gitter"
 
 # languages
 brew "composer"
@@ -67,7 +70,7 @@ cask "orbstack"
 cask "orcaslicer"
 cask "raycast"
 cask "spotify"
-# cask "tailscale-app"
+cask "tailscale-app"
 cask "zed"
 
 # mas "1Password for Safari", id: 1569813296

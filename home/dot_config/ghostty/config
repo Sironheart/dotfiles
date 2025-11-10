@@ -15,7 +15,6 @@ working-directory = home
 copy-on-select = clipboard
 cursor-click-to-move = false
 quit-after-last-window-closed = true
-window-inherit-working-directory = true
 window-save-state = never
 
 #
