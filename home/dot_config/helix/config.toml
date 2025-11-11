@@ -1,0 +1,26 @@
+theme = "flexoki"
+
+[editor]
+mouse = false
+middle-click-paste = false
+cursorline = true
+color-modes = true
+trim-trailing-whitespace = true
+
+[editor.lsp]
+display-inlay-hints = true
+display-progress-messages = true
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+character = "┆"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "warning"
+
+[editor.cursor-shape]
+insert = "bar"

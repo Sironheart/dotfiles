@@ -2,7 +2,7 @@ projects/github.com/sironheart/neovim-config:
   type: "git-repo"
   url: "git@github.com:Sironheart/neovim-config.git"
 
-# .config/fish/conf.d/autopair.fish:
-#   type: file
-#   url: https://raw.githubusercontent.com/jorgebucaran/autopair.fish/refs/heads/main/conf.d/autopair.fish
-#   refreshPeriod: 168h
+.config/helix/themes/flexoki.toml:
+  type: file
+  url: "https://github.com/kepano/flexoki/raw/refs/heads/main/helix/flexoki-dark.toml"
+  refreshPerion: 168h
