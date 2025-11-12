@@ -38,8 +38,9 @@ status is-interactive; and begin
     alias lla 'eza -la'
     alias ls eza
     alias lt 'eza --tree'
-    alias vi nvim
-    alias vim nvim
+    alias vi hx
+    alias vim hx
+    alias jq yq
 
     # Interactive shell initialisation
     zoxide init fish | source
@@ -56,8 +57,8 @@ if [ -n "$VARS_SOURCED" ]
     return
 end
 
-set -gx VARS_SOURCED '1'
-set -gx EDITOR 'nvim'
+set -gx VARS_SOURCED 1
+set -gx EDITOR nvim
 set -gx LANG 'en_US.UTF-8'
 set -gx LC_ALL 'en_US.UTF-8'
 set -gx LC_CTYPE 'en_US.UTF-8'

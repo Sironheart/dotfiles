@@ -24,3 +24,14 @@ other-lines = "warning"
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-g = [
+  ":write-all",
+  ":insert-output lazygit >/dev/tty",
+  ":redraw",
+  ":reload-all"
+]
