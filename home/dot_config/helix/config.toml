@@ -5,7 +5,9 @@ mouse = false
 middle-click-paste = false
 cursorline = true
 color-modes = true
+shell = ["fish", "-c"]
 trim-trailing-whitespace = true
+clipboard-provider = "pasteboard"
 
 [editor.lsp]
 display-inlay-hints = true
@@ -24,3 +26,14 @@ other-lines = "warning"
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-g = [
+  ":write-all",
+  ":insert-output lazygit >/dev/tty",
+  ":redraw",
+  ":reload-all"
+]
