@@ -1,8 +1,0 @@
-projects/github.com/sironheart/neovim-config:
-  type: "git-repo"
-  url: "git@github.com:Sironheart/neovim-config.git"
-
-.config/helix/themes/flexoki.toml:
-  type: file
-  url: "https://github.com/kepano/flexoki/raw/refs/heads/main/helix/flexoki-dark.toml"
-  refreshPerion: 168h

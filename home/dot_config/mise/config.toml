@@ -7,13 +7,9 @@ pipx.uvx = true
 python.uv_venv_auto = true
 
 [tools]
-aws = "latest"
-glab = "latest"
 go = "latest"
 hk = "latest"
 just = "latest"
 lazygit = "latest"
-node = "latest"
-pnpm = "latest"
 rust = "latest"
-taplo = "latest"
+usage = "latest"
