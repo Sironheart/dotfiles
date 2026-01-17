@@ -23,10 +23,6 @@ end
 
 status is-login; and begin
     fish_add_path --prepend /opt/homebrew/bin
-    fish_add_path --prepend /opt/homebrew/opt/node@22/bin
-
-    # Login shell initialisation
-    npm set prefix ~/.npm
 end
 
 status is-interactive; and begin
@@ -47,7 +43,6 @@ status is-interactive; and begin
 
     if test "$TERM" != dumb
         starship init fish | source
-
     end
 
     atuin init fish | source
