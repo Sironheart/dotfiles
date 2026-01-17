@@ -1,0 +1,90 @@
+@import "flexoki-dark.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13pt;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @bg;
+  color: @tx;
+  border-bottom: 1px solid @ui;
+}
+
+/* Make modules look like soft pills */
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery {
+  background: @bg-alt;
+  border-radius: 6px;
+  padding: 0 9px;
+  margin: 4px 4px;
+  border-left: 1px solid @ui-2;
+}
+
+/* Center modules visually a bit */
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0 4px;
+}
+
+/* ===== Workspaces ===== */
+#workspaces button {
+  padding: 0 6px;
+  color: @tx-2;
+  background: transparent;
+  border-radius: 4px;
+  border: none;
+}
+
+#workspaces button.focused {
+  color: @ui;
+  background: @bg-2;
+}
+
+#workspaces button.urgent {
+  color: @bg;
+  background: @re;
+}
+
+/* ===== Clock ===== */
+#clock {
+  color: @ye;
+}
+
+/* ===== Audio ===== */
+#pulseaudio {
+  color: @cy;
+}
+
+#pulseaudio.muted {
+  color: @tx-3;
+}
+
+/* ===== Network ===== */
+#network {
+  color: @gr;
+}
+
+#network.disconnected {
+  color: @re;
+}
+
+/* ===== Battery ===== */
+#battery {
+  color: @ui;
+}
+
+#battery.charging {
+  color: @gr;
+}
+
+#battery.critical:not(.charging) {
+  color: @re;
+}
