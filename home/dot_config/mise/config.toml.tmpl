@@ -13,3 +13,7 @@ just = "latest"
 lazygit = "latest"
 rust = "latest"
 usage = "latest"
+{{- if contains .workspace "work" }}
+glab = "latest"
+aws = { version = "latest", symlink_bins = "true" }
+{{- end }}
