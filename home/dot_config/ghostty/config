@@ -10,12 +10,10 @@ auto-update-channel = stable
 
 confirm-close-surface = false
 fullscreen = false
-working-directory = home
 
 copy-on-select = clipboard
 cursor-click-to-move = false
 quit-after-last-window-closed = true
-window-save-state = never
 
 #
 # custom keybinds

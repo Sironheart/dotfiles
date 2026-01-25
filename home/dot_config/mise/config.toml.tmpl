@@ -1,5 +1,8 @@
 [settings]
 experimental = true
+disable_backends = [
+  "ubi"
+]
 verbose = false
 jobs = 4
 raw = false
@@ -12,7 +15,6 @@ trusted_config_paths = [
 
 [tools]
 go = "latest"
-hk = "latest"
 just = "latest"
 lazygit = "latest"
 rust = "latest"
