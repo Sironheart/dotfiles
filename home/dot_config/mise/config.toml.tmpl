@@ -1,0 +1,25 @@
+[settings]
+experimental = true
+disable_backends = [
+  "ubi"
+]
+verbose = false
+jobs = 4
+raw = false
+pipx.uvx = true
+python.uv_venv_auto = true
+
+trusted_config_paths = [
+	'~/projects',
+]
+
+[tools]
+go = "latest"
+just = "latest"
+lazygit = "latest"
+rust = "latest"
+usage = "latest"
+{{- if contains .workspace "work" }}
+glab = "latest"
+aws = { version = "latest", symlink_bins = "true" }
+{{- end }}

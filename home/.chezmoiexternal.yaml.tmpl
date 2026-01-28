@@ -1,0 +1,15 @@
+projects/github.com/sironheart/neovim-config:
+  type: "git-repo"
+  url: "https://github.com/sironheart/neovim-config"
+
+.config/helix/themes/flexoki.toml:
+  type: file
+  url: "https://github.com/kepano/flexoki/raw/refs/heads/main/helix/flexoki-dark.toml"
+  refreshPerion: 168h
+
+{{ if eq .chezmoi.os "linux" -}}
+.local/share/themes/flexoki:
+  type: archive
+  url: https://github.com/kepano/flexoki/archive/refs/heads/main.zip
+  include: ["gtk/*"]
+{{- end }}

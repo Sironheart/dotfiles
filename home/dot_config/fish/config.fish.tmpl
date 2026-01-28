@@ -8,6 +8,14 @@ if set -q GHOSTTY_RESOURCES_DIR
     source "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
 end
 
+set -gx VARS_SOURCED 1
+set -gx EDITOR nvim
+set -gx LANG 'en_US.UTF-8'
+set -gx LC_ALL 'en_US.UTF-8'
+set -gx LC_CTYPE 'en_US.UTF-8'
+
+{{ if eq .chezmoi.os "linux" -}}mise activate fish | source{{- end }}
+
 #-------------------------------------------------------------------------------
 # Homebrew Shell Integration
 #-------------------------------------------------------------------------------
@@ -23,10 +31,6 @@ end
 
 status is-login; and begin
     fish_add_path --prepend /opt/homebrew/bin
-    fish_add_path --prepend /opt/homebrew/opt/node@22/bin
-
-    # Login shell initialisation
-    npm set prefix ~/.npm
 end
 
 status is-interactive; and begin
@@ -47,7 +51,6 @@ status is-interactive; and begin
 
     if test "$TERM" != dumb
         starship init fish | source
-
     end
 
     atuin init fish | source
@@ -57,12 +60,8 @@ if [ -n "$VARS_SOURCED" ]
     return
 end
 
-set -gx VARS_SOURCED 1
-set -gx EDITOR nvim
-set -gx LANG 'en_US.UTF-8'
-set -gx LC_ALL 'en_US.UTF-8'
-set -gx LC_CTYPE 'en_US.UTF-8'
-
+{{ if eq .chezmoi.os "darwin" }}
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+{{ end }}
