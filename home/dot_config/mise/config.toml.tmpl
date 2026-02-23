@@ -1,17 +1,13 @@
 [settings]
 experimental = true
-disable_backends = [
-  "ubi"
-]
+disable_backends = ["ubi"]
 verbose = false
 jobs = 4
 raw = false
 pipx.uvx = true
 python.uv_venv_auto = true
 
-trusted_config_paths = [
-	'~/projects',
-]
+trusted_config_paths = ['~/projects']
 
 [tools]
 go = "latest"
@@ -20,6 +16,6 @@ lazygit = "latest"
 rust = "latest"
 usage = "latest"
 {{- if contains .workspace "work" }}
-glab = "latest"
+"gitlab:gitlab-org/cli" = "latest"
 aws = { version = "latest", symlink_bins = "true" }
 {{- end }}
