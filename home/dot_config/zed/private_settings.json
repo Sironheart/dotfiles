@@ -1,4 +1,5 @@
 {
+  "base_keymap": "JetBrains",
   "disable_ai": true,
   "theme": "Flexoki Dark",
   "icon_theme": "JetBrains New UI Icons (Dark)",
