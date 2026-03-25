@@ -4,6 +4,7 @@
 brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
 tap "homebrew/cask"
 tap "azure/kubelogin"
+tap "anomalyco/tap"
 
 brew "atuin"
 brew "bat"
@@ -17,7 +18,7 @@ brew "mole"
 brew "starship"
 brew "yq"
 brew "zoxide"
-brew "helix"
+brew "opencode"
 
 # lsp
 # brew "Jetbrains/utils/kotlin-lsp"
@@ -46,14 +47,11 @@ cask "font-jetbrains-mono-nerd-font"
 cask "1password"
 cask "1password-cli"
 cask "brave-browser"
-cask "codex"
 cask "discord"
 cask "elgato-camera-hub"
-# cask "elgato-stream-deck"
 cask "ghostty"
 cask "jetbrains-toolbox"
 cask "logi-options+"
-# cask "obs"
 cask "orbstack"
 cask "orcaslicer"
 cask "raycast"
@@ -63,8 +61,5 @@ cask "tailscale-app"
 cask "xcodes-app"
 cask "zed"
 cask "zen"
-
-# mas "1Password for Safari", id: 1569813296
-# mas "AdGuard for Safari", id: 1440147259
 EOF
 {{- end -}}
