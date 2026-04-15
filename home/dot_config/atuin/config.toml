@@ -1,4 +1,4 @@
-sync_address = "https://atuin.siron.casa"
+sync_address = "https://sh.siron.casa"
 dialect = "uk"
 history_filter = ["token"]
 inline_height = 20

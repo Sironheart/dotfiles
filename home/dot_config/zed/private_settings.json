@@ -4,13 +4,6 @@
   "theme": "Flexoki Dark",
   "icon_theme": "JetBrains New UI Icons (Dark)",
   "max_tabs": 1,
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
-    },
-    "always_allow_tool_actions": true
-  },
   "soft_wrap": "none",
   "autosave": "on_focus_change",
   "buffer_font_size": 14,
