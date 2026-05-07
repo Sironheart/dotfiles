@@ -1,4 +1,9 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 [aws]
+disabled = true
+
+[azure]
 disabled = true
 
 [cmake]
@@ -15,7 +20,7 @@ truncation_length = 999
 [docker_context]
 disabled = true
 
-[env_var]
+[gcloud]
 disabled = true
 
 [gradle]
