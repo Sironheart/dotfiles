@@ -7,5 +7,6 @@
     "openai",
     "opencode-go",
     "openrouter"
-  ]
+  ],
+  "lsp": true
 }
