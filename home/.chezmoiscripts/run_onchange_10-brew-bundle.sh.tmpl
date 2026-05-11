@@ -4,6 +4,12 @@
 brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
 # tap "homebrew/cask"
 
+{{ if contains .workspace "private" -}}
+# commented out due to not feeling ready to use yet
+#tap "BarutSRB/tap"
+#cask "omniwm"
+{{- end }}
+
 {{ if contains .workspace "work" -}}
 tap "azure/kubelogin"
 tap "anomalyco/tap"
