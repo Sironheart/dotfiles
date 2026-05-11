@@ -3,8 +3,18 @@
 
 brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
 tap "homebrew/cask"
+
+{{ if contains .workspace "work" -}}
 tap "azure/kubelogin"
 tap "anomalyco/tap"
+
+# work
+brew "Azure/kubelogin/kubelogin"
+brew "multi-gitter"
+brew "opencode"
+
+cask "brave-browser"
+{{- end }}
 
 brew "atuin"
 brew "bat"
@@ -18,7 +28,6 @@ brew "mole"
 brew "starship"
 brew "yq"
 brew "zoxide"
-brew "opencode"
 
 # lsp
 # brew "Jetbrains/utils/kotlin-lsp"
@@ -28,10 +37,6 @@ brew "fzf"
 brew "helm"
 brew "kubectl"
 brew "k9s"
-
-# work
-brew "Azure/kubelogin/kubelogin"
-brew "multi-gitter"
 
 # needed for nvim
 brew "fd"
@@ -46,7 +51,6 @@ cask "font-jetbrains-mono-nerd-font"
 
 cask "1password"
 cask "1password-cli"
-cask "brave-browser"
 cask "discord"
 cask "elgato-camera-hub"
 cask "ghostty"
