@@ -2,7 +2,7 @@
 #!/usr/bin/env bash
 
 brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
-tap "homebrew/cask"
+# tap "homebrew/cask"
 
 {{ if contains .workspace "work" -}}
 tap "azure/kubelogin"
@@ -17,6 +17,7 @@ cask "brave-browser"
 {{- end }}
 
 brew "atuin"
+brew "lazygit"
 brew "bat"
 brew "chezmoi"
 brew "eza"
