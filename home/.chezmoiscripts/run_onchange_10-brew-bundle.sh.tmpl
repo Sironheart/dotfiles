@@ -8,6 +8,8 @@ brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
 # commented out due to not feeling ready to use yet
 #tap "BarutSRB/tap"
 #cask "omniwm"
+tap "TheBoredTeam/boring-notch"
+cask "boring-notch"
 {{- end }}
 
 {{ if contains .workspace "work" -}}
