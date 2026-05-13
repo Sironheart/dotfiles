@@ -2,14 +2,13 @@
 #!/usr/bin/env bash
 
 brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
-# tap "homebrew/cask"
-
 {{ if contains .workspace "private" -}}
 # commented out due to not feeling ready to use yet
 #tap "BarutSRB/tap"
-#cask "omniwm"
 tap "TheBoredTeam/boring-notch"
+
 cask "boring-notch"
+#cask "omniwm"
 {{- end }}
 
 {{ if contains .workspace "work" -}}
@@ -22,6 +21,8 @@ brew "multi-gitter"
 brew "opencode"
 
 cask "brave-browser"
+cask "jetbrains-toolbox"
+cask "slack"
 {{- end }}
 
 brew "atuin"
@@ -37,9 +38,6 @@ brew "mole"
 brew "starship"
 brew "yq"
 brew "zoxide"
-
-# lsp
-# brew "Jetbrains/utils/kotlin-lsp"
 
 # kubernetes
 brew "fzf"
@@ -63,12 +61,10 @@ cask "1password-cli"
 cask "discord"
 cask "elgato-camera-hub"
 cask "ghostty"
-cask "jetbrains-toolbox"
 cask "logi-options+"
 cask "orbstack"
 cask "orcaslicer"
 cask "raycast"
-cask "slack"
 cask "spotify"
 cask "tailscale-app"
 cask "whatsapp"
