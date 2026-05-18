@@ -1,11 +1,9 @@
 [settings]
 experimental = true
 disable_backends = ["ubi"]
-verbose = false
-jobs = 4
-raw = false
 pipx.uvx = true
 python.uv_venv_auto = true
+minimum_release_age = "7d"
 
 trusted_config_paths = ['~/projects']
 
@@ -15,8 +13,8 @@ just = "latest"
 lazygit = "latest"
 rust = "latest"
 usage = "latest"
+node = "latest"
 {{- if contains .workspace "work" }}
 "gitlab:gitlab-org/cli" = "latest"
 aws = { version = "latest", symlink_bins = "true" }
-node = "latest"
 {{- end }}
