@@ -7,5 +7,6 @@
     "opencode-go",
     "openrouter"
   ],
-  "lsp": true
+  "lsp": true,
+  "shell": "fish"
 }

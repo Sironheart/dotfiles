@@ -4,8 +4,12 @@ disable_backends = ["ubi"]
 pipx.uvx = true
 python.uv_venv_auto = true
 minimum_release_age = "7d"
+lockfile = true
 
 trusted_config_paths = ['~/projects']
+
+[settings.github]
+use_git_credentials = true
 
 [tools]
 go = "latest"
