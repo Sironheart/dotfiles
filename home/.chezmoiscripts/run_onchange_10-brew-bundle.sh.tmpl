@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
-brew bundle --upgrade --cleanup --file=/dev/stdin <<EOF
+brew bundle --upgrade --cleanup --force-cleanup --file=/dev/stdin <<EOF
 {{ if contains .workspace "private" -}}
 # commented out due to not feeling ready to use yet
 #tap "BarutSRB/tap"
@@ -62,6 +62,7 @@ cask "1password-cli"
 cask "discord"
 cask "elgato-camera-hub"
 cask "ghostty"
+cask "gram"
 cask "orbstack"
 cask "orcaslicer"
 cask "raycast"
@@ -69,7 +70,6 @@ cask "spotify"
 cask "tailscale-app"
 cask "whatsapp"
 cask "xcodes-app"
-cask "zed"
 cask "zen"
 EOF
 {{- end -}}
