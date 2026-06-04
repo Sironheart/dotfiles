@@ -8,5 +8,38 @@
     "openrouter"
   ],
   "lsp": true,
-  "shell": "fish"
+  "shell": "fish",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git commit": "deny",
+      "git commit *": "deny",
+      "git logs": "allow",
+      "git logs *": "allow",
+      "git push": "deny",
+      "git push *": "deny",
+      "git status": "allow",
+      "git status *": "allow",
+      "kubectl apply": "deny",
+      "kubectl apply *": "deny",
+      "kubectl create": "deny",
+      "kubectl create *": "deny",
+      "kubectl delete": "deny",
+      "kubectl delete *": "deny",
+      "kubectl describe": "allow",
+      "kubectl describe *": "allow",
+      "kubectl edit": "deny",
+      "kubectl edit *": "deny",
+      "kubectl exec": "deny",
+      "kubectl exec *": "deny",
+      "kubectl get": "allow",
+      "kubectl get *": "allow",
+      "kubectl patch": "deny",
+      "kubectl patch *": "deny",
+      "kubectl run": "deny",
+      "kubectl run *": "deny",
+      "kubectl set": "deny",
+      "kubectl set *": "deny"
+    }
+  }
 }
