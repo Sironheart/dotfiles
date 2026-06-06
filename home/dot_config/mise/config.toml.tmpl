@@ -16,8 +16,12 @@ go = "latest"
 just = "latest"
 lazygit = "latest"
 rust = "latest"
-usage = "latest"
 node = "latest"
+
+{{- if eq .chezmoi.os "linux" }}
+usage = "latest"
+{{- end }}
+
 {{- if contains .workspace "work" }}
 "gitlab:gitlab-org/cli" = "latest"
 aws = { version = "latest", symlink_bins = "true" }
