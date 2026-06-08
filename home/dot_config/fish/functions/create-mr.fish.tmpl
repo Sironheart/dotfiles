@@ -1,6 +1,12 @@
 {{- if contains .workspace "work" }}
 function create-mr
-    glab mr create --yes --remove-source-branch -a {{ .git.gitlab_user | quote }} -d "" -t "$(git rev-parse --abbrev-ref HEAD | awk 'BEGIN {
+    glab mr create --yes --remove-source-branch \
+        -a {{ .git.gitlab_user | quote }} \
+        --reviewer "acar" \
+        --reviewer "bergF" \
+        --reviewer "stuercke" \
+        -d "" \
+        -t "$(git rev-parse --abbrev-ref HEAD | awk 'BEGIN {
      FS="/";
      OFS=":";
     }{

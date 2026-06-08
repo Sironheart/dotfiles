@@ -1,0 +1,18 @@
+# Global Rules
+
+- **Concise output, no fluff**: be short and to the point. Don't bury the user in text, but don't leave out anything important about what you did. If something matters, it goes in — just said tightly.
+- **Verify with docs, don't assume**: when making factual claims (API behavior, config options, syntax, etc.), back them up with a link or excerpt from the actual documentation rather than relying on training-data memory.
+- **Use opencode question tool for questions**: If you want to ask questions about implementation details always use the opencode question tool
+- Leverage opencode subagents in order to keep context clean.
+
+## Tool usage:
+- You are allowed to use almost any tool on the environment
+- Most projects will use [mise](https://mise.jdx.dev) to install software that is missing in the environment
+- Only write to files. Docker/Kubernetes/Kafka/Database/etc services should only be used to read from, never write to!
+- All changes require human review! Don't ever just commit, apply or edit without a human first approving this changes
+
+## Environment info (this computer)
+
+- {{ if eq .chezmoi.os "darwin" }}macos{{ else }}linux{{ end }} with fish shell primarily used
+- prefer installation via mise over installation with brew
+

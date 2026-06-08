@@ -16,7 +16,7 @@ go = "latest"
 just = "latest"
 lazygit = "latest"
 rust = "latest"
-node = "latest"
+node = { version = "latest", corepack = "disable" }
 
 {{- if eq .chezmoi.os "linux" }}
 usage = "latest"
