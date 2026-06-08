@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 
-brew bundle --upgrade --cleanup --force-cleanup --file=/dev/stdin <<EOF
+brew bundle --upgrade --force-cleanup --file=/dev/stdin <<EOF
 {{ if contains .workspace "private" -}}
 # commented out due to not feeling ready to use yet
 #tap "BarutSRB/tap"
