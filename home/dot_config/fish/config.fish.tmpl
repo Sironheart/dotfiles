@@ -17,6 +17,14 @@ set -gx LC_CTYPE 'en_US.UTF-8'
 {{ if eq .chezmoi.os "linux" -}}mise activate fish | source{{- end }}
 set -q KREW_ROOT; and set -gx PATH $PATH $KREW_ROOT/.krew/bin; or set -gx PATH $PATH $HOME/.krew/bin
 
+{{ if eq .workspace "work" -}}
+set -l cert_path "/Library/Application Support/Cloudflare/installed_cert.pem"
+
+if test -e "$cert_path"
+    set -gx NODE_EXTRA_CA_CERTS "$cert_path"
+end
+{{- end }}
+
 #-------------------------------------------------------------------------------
 # Homebrew Shell Integration
 #-------------------------------------------------------------------------------
