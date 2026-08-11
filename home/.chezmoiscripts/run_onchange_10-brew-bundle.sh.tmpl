@@ -14,22 +14,26 @@ cask "tailscale-app"
 {{- end }}
 
 {{ if contains .workspace "work" -}}
-tap "azure/kubelogin"
-tap "anomalyco/tap"
+tap "azure/kubelogin", trusted: {
+  formula: "kubelogin"
+}
 
+tap "anomalyco/tap"
 # work
 brew "Azure/kubelogin/kubelogin"
 brew "multi-gitter"
 
 cask "brave-browser"
+cask "cursor"
 cask "jetbrains-toolbox"
-cask "logi-options+"
+cask "microsoft-teams"
 cask "slack"
 {{- end }}
 
 brew "atuin"
 brew "bat"
 brew "chezmoi"
+brew "container"
 brew "eza"
 brew "fish"
 brew "gh"
@@ -43,7 +47,6 @@ brew "yq"
 brew "zoxide"
 
 # kubernetes
-brew "fzf"
 brew "helm"
 brew "kubectl"
 brew "k9s"
@@ -61,11 +64,9 @@ cask "font-jetbrains-mono-nerd-font"
 
 cask "1password"
 cask "1password-cli"
-cask "discord"
+cask "discord@canary"
 cask "elgato-camera-hub"
 cask "ghostty"
-cask "gram"
-cask "orbstack"
 cask "raycast"
 cask "spotify"
 cask "whatsapp"
