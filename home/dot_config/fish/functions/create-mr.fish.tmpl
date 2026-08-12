@@ -3,8 +3,6 @@ function create-mr
     glab mr create --yes --remove-source-branch \
         -a {{ .git.gitlab_user | quote }} \
         --reviewer "acar" \
-        --reviewer "stuercke" \
-        --reviewer "huberc" \
         -d "" \
         -t "$(git rev-parse --abbrev-ref HEAD | awk 'BEGIN {
      FS="/";
