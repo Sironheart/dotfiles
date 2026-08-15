@@ -33,5 +33,11 @@
       "kubectl set": "deny",
       "kubectl set *": "deny"
     }
+  },
+  "mcp": {
+    "mise": {
+      "type": "local",
+      "command": ["mise", "mcp"]
+    }
   }
 }
