@@ -18,12 +18,18 @@ lazygit = "latest"
 rust = "latest"
 node = "latest"
 k9s = "latest"
-
-{{- if eq .chezmoi.os "linux" }}
-usage = "latest"
-{{- end }}
-
-{{- if contains .workspace "work" }}
-"gitlab:gitlab-org/cli" = "latest"
-aws = { version = "latest", symlink_bins = "true" }
-{{- end }}
+atuin = "latest"
+bat = "latest"
+chezmoi = "latest"
+eza = "latest"
+fd = "latest"
+gh = "latest"
+helm = "latest"
+kubectl = "latest"
+neovim = "latest"
+opencode = "latest"
+"1password-cli" = "latest"
+ripgrep = "latest"
+starship = "latest"
+yq = "latest"
+zoxide = "latest"

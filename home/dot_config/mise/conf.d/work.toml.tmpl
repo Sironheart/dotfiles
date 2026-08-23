@@ -1,0 +1,16 @@
+{{- if contains .workspace "work" }}
+[tools]
+kubelogin = "latest"
+"gitlab:gitlab-org/cli" = "latest"
+aws = { version = "latest", symlink_bins = "true" }
+
+[bootstrap.packages]
+"brew:multi-gitter" = "latest"
+"brew-cask:brave-browser" = "latest"
+"brew-cask:cursor" = "latest"
+"brew-cask:jetbrains-toolbox" = "latest"
+"brew-cask:slack" = "latest"
+
+[tasks.bootstrap]
+run = "if command -v brew >/dev/null 2>&1; then brew install --cask microsoft-teams; fi"
+{{- end }}

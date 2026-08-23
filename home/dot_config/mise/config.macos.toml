@@ -1,0 +1,52 @@
+[bootstrap.brew]
+adopt = true
+
+[bootstrap.packages]
+"brew:fish" = "latest"
+"brew:gnupg" = "latest"
+"brew:imagemagick" = "latest"
+"brew:mole" = "latest"
+"brew:wget" = "latest"
+"brew-cask:1password" = "latest"
+"brew-cask:discord@canary" = "latest"
+"brew-cask:elgato-camera-hub" = "latest"
+"brew-cask:font-jetbrains-mono" = "latest"
+"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
+"brew-cask:ghostty" = "latest"
+"brew-cask:orbstack" = "latest"
+"brew-cask:raycast" = "latest"
+"brew-cask:spotify" = "latest"
+"brew-cask:whatsapp" = "latest"
+"brew-cask:xcodes-app" = "latest"
+"brew-cask:zen" = "latest"
+
+[bootstrap.macos.dock]
+autohide = true
+show_recents = false
+
+[bootstrap.macos.finder]
+show_all_files = true
+show_pathbar = true
+show_extensions_warning = false
+preferred_view_style = "list"
+
+[bootstrap.macos.keyboard]
+fn_state = false
+
+[bootstrap.macos.defaults]
+"NSGlobalDomain" = { AppleInterfaceStyle = "Dark", AppleShowAllExtensions = true, AppleKeyboardUIMode = 2, NSAutomaticCapitalizationEnabled = false, NSAutomaticDashSubstitutionEnabled = false, NSAutomaticPeriodSubstitutionEnabled = false, NSAutomaticQuoteSubstitutionEnabled = false, NSAutomaticSpellingCorrectionEnabled = false, NSQuitAlwaysKeepsWindow = false, NSTableViewDefaultSizeMode = 1 }
+"com.apple.AppleMultitouchTrackpad" = { FirstClickThreshold = 2 }
+"com.apple.CloudSubscriptionFeatures.optIn" = { "545129924" = false }
+"com.apple.HIToolbox" = { AppleFnUsageType = 0 }
+"com.apple.Safari" = { ShowFullURLInSmartSearchField = true }
+"com.apple.TextEdit" = { SmartQuotes = false }
+"com.apple.dock" = { mineffect = "scale" }
+"com.apple.finder" = { AppleShowAllExtensions = true, _FXSortFoldersFirst = true }
+
+[bootstrap.hooks.post-defaults]
+run = [
+  "killall Dock || true",
+  "killall Finder || true",
+  "killall Safari || true",
+  "killall TextEdit || true",
+]

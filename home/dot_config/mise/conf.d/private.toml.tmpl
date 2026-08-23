@@ -1,0 +1,8 @@
+{{- if contains .workspace "private" }}
+[bootstrap.packages]
+"brew-cask:orcaslicer" = "latest"
+"brew-cask:tailscale-app" = "latest"
+
+[tasks.bootstrap]
+run = "if command -v brew >/dev/null 2>&1; then brew tap theboredteam/boring-notch 2>/dev/null || true; brew trust theboredteam/boring-notch; brew install --cask boring-notch; fi"
+{{- end }}
