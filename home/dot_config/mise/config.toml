@@ -11,6 +11,9 @@ trusted_config_paths = ['~/projects']
 [settings.github]
 use_git_credentials = true
 
+[bootstrap.mise_shell_activate]
+fish = "activate"
+
 [tools]
 go = "latest"
 just = "latest"
