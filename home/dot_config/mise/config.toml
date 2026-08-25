@@ -34,3 +34,16 @@ ripgrep = "latest"
 starship = "latest"
 yq = "latest"
 zoxide = "latest"
+
+[tools."http:memini"]
+version = "0.7.20"
+checksum_url = 'https://git.erwanleboucher.dev/eleboucher/memini/releases/download/v{{version}}/memini_{{version}}_checksums.txt'
+version_list_url = "https://git.erwanleboucher.dev/api/v1/repos/eleboucher/memini/releases"
+version_json_path = ".[].tag_name"
+version_order = "semver"
+
+[tools."http:memini".platforms]
+macos-arm64 = { url = 'https://git.erwanleboucher.dev/eleboucher/memini/releases/download/v{{version}}/memini_{{version}}_darwin_arm64.tar.gz' }
+macos-x64 = { url = 'https://git.erwanleboucher.dev/eleboucher/memini/releases/download/v{{version}}/memini_{{version}}_darwin_amd64.tar.gz' }
+linux-arm64 = { url = 'https://git.erwanleboucher.dev/eleboucher/memini/releases/download/v{{version}}/memini_{{version}}_linux_arm64.tar.gz' }
+linux-x64 = { url = 'https://git.erwanleboucher.dev/eleboucher/memini/releases/download/v{{version}}/memini_{{version}}_linux_amd64.tar.gz' }
