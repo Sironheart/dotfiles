@@ -16,6 +16,7 @@ adopt = true
 "brew-cask:orbstack" = "latest"
 "brew-cask:raycast" = "latest"
 "brew-cask:spotify" = "latest"
+"brew-cask:vorssaint" = "latest"
 "brew-cask:whatsapp" = "latest"
 "brew-cask:xcodes-app" = "latest"
 "brew-cask:zen" = "latest"

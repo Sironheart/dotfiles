@@ -1,4 +1,4 @@
 {
-	"$schema": "https://opencode.ai/tui.json",
-	"theme": "flexoki"
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "flexoki"
 }

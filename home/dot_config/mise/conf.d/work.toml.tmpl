@@ -1,6 +1,5 @@
 {{- if contains .workspace "work" }}
 [tools]
-kubelogin = "latest"
 "gitlab:gitlab-org/cli" = "latest"
 aws = { version = "latest", symlink_bins = "true" }
 
@@ -12,5 +11,8 @@ aws = { version = "latest", symlink_bins = "true" }
 "brew-cask:slack" = "latest"
 
 [tasks.bootstrap]
-run = "if command -v brew >/dev/null 2>&1; then brew install --cask microsoft-teams; fi"
+run = [
+  "if command -v brew >/dev/null 2>&1; then brew install --cask microsoft-teams; fi",
+  "if command -v brew >/dev/null 2>&1; then brew install Azure/kubelogin/kubelogin; fi",
+]
 {{- end }}
