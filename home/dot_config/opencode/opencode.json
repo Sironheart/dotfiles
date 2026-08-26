@@ -32,6 +32,10 @@
     "mise": {
       "type": "local",
       "command": ["mise", "mcp"]
+    },
+    "memini": {
+      "type": "remote",
+      "url": "https://memini.siron.casa/mcp"
     }
   }
 }
