@@ -1,0 +1,35 @@
+[keys]
+palette_next = "ctrl-n"
+palette_prev = "ctrl-p"
+palette_accept = ["ctrl-y", "enter"]
+
+[skin]
+name = "flexoki"  # fallback base only; every swatch overridden below
+background = true # paint flexoki black; set false to inherit terminal bg
+
+[skin.colors]
+rosewater = "#DAD8CE" # base-150 — marked rows
+flamingo = "#B7B5AC"  # base-300
+pink = "#CE5D97"      # magenta-400
+mauve = "#575653"     # base-700 (tx-3) — borders, terminating, YAML headers
+red = "#D14D41"       # red-400 — errors
+maroon = "#AF3029"    # red-600
+peach = "#DA702C"     # orange-400 — pending/warn, numbers
+yellow = "#D0A215"    # yellow-400 — table headers, search highlight
+green = "#879A39"     # green-400 — success
+teal = "#3AA99F"      # cyan-400 — titles/accents (links, active states)
+sky = "#4385BE"       # blue-400 — YAML keys (attributes), sort indicator
+sapphire = "#205EA6"  # blue-600
+blue = "#CECDC3"      # base-200 (tx) — healthy rows read as primary text, not blue
+lavender = "#3AA99F"  # cyan-400 — selected row, focused border (active)
+text = "#CECDC3"      # base-200 (tx)
+subtext1 = "#B7B5AC"  # base-300
+subtext0 = "#9F9D96"  # base-400
+overlay1 = "#878580"  # base-500 (tx-2 muted) — dim
+overlay0 = "#575653"  # base-700 (tx-3 faint) — completed rows
+surface2 = "#343331"  # base-850 (ui-2)
+surface1 = "#282726"  # base-900 (ui)
+surface0 = "#1C1B1A"  # base-950 (bg-2)
+base = "#100F0F"      # black (bg)
+mantle = "#100F0F"    # black
+crust = "#100F0F"     # black
