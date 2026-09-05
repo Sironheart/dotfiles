@@ -1,5 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "plugins": [
+    {
+      "package": "@eleboucher/opencode-memini-v2",
+      "options": { "base_url": "https://memini.siron.casa/" }
+    }
+  ],
   "enabled_providers": ["anthropic", "llama", "openai", "opencode-go", "openrouter"],
   "lsp": true,
   "shell": "fish",
