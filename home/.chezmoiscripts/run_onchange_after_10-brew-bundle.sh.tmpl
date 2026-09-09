@@ -1,0 +1,6 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+
+# Brewfile checksum: {{ includeTemplate "dot_Brewfile.tmpl" . | sha256sum }}
+brew bundle --upgrade --force-cleanup --file="$HOME/.Brewfile"
+{{- end }}

@@ -1,7 +1,7 @@
-[keys]
-palette_next = "ctrl-n"
-palette_prev = "ctrl-p"
-palette_accept = ["ctrl-y", "enter"]
+[keys.command]
+down = "ctrl-n"
+up = "ctrl-p"
+accept = ["ctrl-y", "enter"]
 
 [skin]
 name = "flexoki"  # fallback base only; every swatch overridden below

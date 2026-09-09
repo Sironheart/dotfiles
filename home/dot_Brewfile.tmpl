@@ -1,0 +1,50 @@
+{{- if eq .chezmoi.os "darwin" }}
+{{ if contains .workspace "private" -}}
+tap "theboredteam/boring-notch", trusted: true
+
+cask "boring-notch"
+cask "orcaslicer"
+cask "tailscale-app"
+{{- end }}
+
+tap "nklmilojevic/sofka", trusted: {
+  formula: "sofka",
+}
+brew "nklmilojevic/sofka/sofka"
+
+{{ if contains .workspace "work" -}}
+tap "azure/kubelogin", trusted: {
+  formula: "kubelogin",
+}
+
+brew "azure/kubelogin/kubelogin"
+brew "multi-gitter"
+
+cask "brave-browser"
+cask "cursor"
+cask "jetbrains-toolbox"
+cask "microsoft-teams"
+cask "slack"
+{{- end }}
+
+brew "fish"
+brew "gnupg"
+brew "imagemagick"
+brew "mole"
+brew "mise"
+brew "wget"
+
+cask "1password"
+cask "discord@canary"
+cask "elgato-camera-hub"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "ghostty"
+cask "orbstack"
+cask "raycast"
+cask "spotify"
+cask "vorssaint"
+cask "whatsapp"
+cask "xcodes-app"
+cask "zen"
+{{- end }}

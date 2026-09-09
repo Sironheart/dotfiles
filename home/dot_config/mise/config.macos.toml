@@ -1,26 +1,3 @@
-[bootstrap.brew]
-adopt = true
-
-[bootstrap.packages]
-"brew:fish" = "latest"
-"brew:gnupg" = "latest"
-"brew:imagemagick" = "latest"
-"brew:mole" = "latest"
-"brew:wget" = "latest"
-"brew-cask:1password" = "latest"
-"brew-cask:discord@canary" = "latest"
-"brew-cask:elgato-camera-hub" = "latest"
-"brew-cask:font-jetbrains-mono" = "latest"
-"brew-cask:font-jetbrains-mono-nerd-font" = "latest"
-"brew-cask:ghostty" = "latest"
-"brew-cask:orbstack" = "latest"
-"brew-cask:raycast" = "latest"
-"brew-cask:spotify" = "latest"
-"brew-cask:vorssaint" = "latest"
-"brew-cask:whatsapp" = "latest"
-"brew-cask:xcodes-app" = "latest"
-"brew-cask:zen" = "latest"
-
 [bootstrap.macos.dock]
 autohide = true
 show_recents = false

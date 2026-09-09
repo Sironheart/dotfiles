@@ -2,3 +2,6 @@
 .config/hypr
 .config/waybar
 {{- end }}
+{{- if ne .chezmoi.os "darwin" }}
+.Brewfile
+{{- end }}
