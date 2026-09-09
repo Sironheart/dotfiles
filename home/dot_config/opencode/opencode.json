@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "instructions": ["rules/*.md"],
   "plugins": [
     {
       "package": "@eleboucher/opencode-memini-v2",
@@ -12,6 +13,8 @@
   "permission": {
     "bash": {
       "*": "allow",
+      "brew": "deny",
+      "brew *": "deny",
       "git commit": "deny",
       "git commit *": "deny",
       "git push": "deny",
