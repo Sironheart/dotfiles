@@ -1,6 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": ["rules/*.md"],
+  "plugin": [["@eleboucher/opencode-memini", { "base_url": "https://memini.siron.casa/" }]],
   "plugins": [
     {
       "package": "@eleboucher/opencode-memini-v2",
@@ -41,10 +42,6 @@
     "mise": {
       "type": "local",
       "command": ["mise", "mcp"]
-    },
-    "memini": {
-      "type": "remote",
-      "url": "https://memini.siron.casa/mcp"
     }
   }
 }
