@@ -24,6 +24,10 @@ if test -e "$cert_path"
 end
 {{- end }}
 
+# >>> mise:activate >>> managed by mise — do not edit between markers
+mise activate fish | source
+# <<< mise:activate <<<
+
 #-------------------------------------------------------------------------------
 # Homebrew Shell Integration
 #-------------------------------------------------------------------------------
@@ -69,10 +73,6 @@ end
 if [ -n "$VARS_SOURCED" ]
     return
 end
-
-# >>> mise:activate >>> managed by mise — do not edit between markers
-mise activate fish | source
-# <<< mise:activate <<<
 
 {{ if eq .chezmoi.os "darwin" }}
 # Added by OrbStack: command-line tools and integration
