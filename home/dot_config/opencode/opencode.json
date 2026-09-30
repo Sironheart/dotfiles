@@ -1,11 +1,17 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": ["rules/*.md"],
-  "plugin": [["@eleboucher/opencode-memini", { "base_url": "https://memini.siron.casa/" }]],
+  "plugin": [
+    ["@eleboucher/opencode-memini", { "base_url": "https://memini.siron.casa/" }],
+    "@dietrichgebert/ponytail"
+  ],
   "plugins": [
     {
       "package": "@eleboucher/opencode-memini-v2",
       "options": { "base_url": "https://memini.siron.casa/" }
+    },
+    {
+      "package": "@dietrichgebert/ponytail"
     }
   ],
   "enabled_providers": ["anthropic", "llama", "openai", "opencode-go", "openrouter"],
