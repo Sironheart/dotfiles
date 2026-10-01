@@ -7,11 +7,6 @@ cask "orcaslicer"
 cask "tailscale-app"
 {{- end }}
 
-tap "nklmilojevic/sofka", trusted: {
-  formula: "sofka",
-}
-brew "nklmilojevic/sofka/sofka"
-
 {{ if contains .workspace "work" -}}
 tap "azure/kubelogin", trusted: {
   formula: "kubelogin",
