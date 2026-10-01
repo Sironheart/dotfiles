@@ -1,6 +1,6 @@
 sync_address = "https://sh.siron.casa"
 dialect = "uk"
-history_filter = ["token"]
+history_filter = ["token", "TOKEN"]
 inline_height = 20
 keymap_mode = "vim-insert"
 show_preview = true
