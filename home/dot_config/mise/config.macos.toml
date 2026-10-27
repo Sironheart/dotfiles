@@ -28,3 +28,6 @@ run = [
   "killall Safari || true",
   "killall TextEdit || true",
 ]
+
+[tools]
+"1password-cli" = "latest"
