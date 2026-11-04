@@ -1,10 +1,12 @@
 [settings]
 experimental = true
 disable_backends = ["ubi"]
-pipx.uvx = true
-python.uv_venv_auto = true
+python.uv_venv_auto = "create|source"
 minimum_release_age = "7d"
 lockfile = true
+use_versions_host_track = false
+dotnet.cli_telemetry_optout = true
+skills.fetch = false
 
 trusted_config_paths = ['~/projects']
 
