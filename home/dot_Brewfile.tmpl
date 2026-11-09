@@ -1,8 +1,6 @@
 {{- if eq .chezmoi.os "darwin" }}
-{{ if contains .workspace "private" -}}
-tap "theboredteam/boring-notch", trusted: true
 
-cask "boring-notch"
+{{ if contains .workspace "private" -}}
 cask "orcaslicer"
 cask "tailscale-app"
 {{- end }}
