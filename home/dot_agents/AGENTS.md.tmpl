@@ -2,9 +2,11 @@
 
 - **Concise output, no fluff**: be short and to the point. Don't bury the user in text, but don't leave out anything important about what you did. If something matters, it goes in — just said tightly.
 - **Verify with docs, don't assume**: when making factual claims (API behavior, config options, syntax, etc.), back them up with a link or excerpt from the actual documentation rather than relying on training-data memory.
-- **Use opencode question tool for questions**: If you want to ask questions about implementation details always use the opencode question tool
-- Leverage opencode subagents in order to keep context clean.
+- Use the harness's question tool for implementation questions when available; otherwise ask in chat.
+- Leverage subagents, when available, to keep context clean.
 - If you need to do something temporary, that can be deleted anytime later, do this inside a `.tmp` folder of the current project
+- Think like a boyscout: Always leave the code more clean than when you found/ edited it
+- Always prioritize readability over pragmatism
 
 ## Tool usage:
 - You are allowed to use almost any tool on the environment
@@ -15,9 +17,4 @@
 ## Environment info (this computer)
 
 - {{ if eq .chezmoi.os "darwin" }}macos{{ else }}linux{{ end }} with fish shell primarily used
-- prefer installation via mise over installation with brew
-
-## Programming style
-- Follow YAGNI principles, and one-liner solutions
-- Always prioritize readability over pragmatism
-- Think like a boyscout: Always leave the code more clean than when you found/ edited it
+- prefer installation via mise over installation with brew, unless complexity is too high! Ask for any brew installation!

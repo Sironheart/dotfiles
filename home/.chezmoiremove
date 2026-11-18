@@ -1,0 +1,14 @@
+.config/opencode/AGENTS.md
+.config/opencode/rules/additive-telemetry-output.md
+.config/opencode/rules/always-tdd.md
+.config/opencode/rules/caveman-mode.md
+.config/opencode/rules/comments-why-not-what.md
+.config/opencode/rules/correction-creates-rule.md
+.config/opencode/rules/mise-backend-artifact-verification.md
+.config/opencode/rules/one-sided-optional-booleans.md
+.config/opencode/rules/renovate-aws-version-pins.md
+.config/opencode/rules/renovate-direct-extraction.md
+.config/opencode/rules/renovate-mise-automerge.md
+.config/opencode/skills/go-interface-conformance/SKILL.md
+.config/opencode/skills/pulumi-resource-style/SKILL.md
+.config/opencode/skills/reread-before-rewrite/SKILL.md
