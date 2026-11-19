@@ -13,3 +13,18 @@ projects/forgejo.siron.casa/sironheart/neovim-config:
   url: https://github.com/kepano/flexoki/archive/refs/heads/main.zip
   include: ["gtk/*"]
 {{- end }}
+
+{{- $mattPocockSkills := dict
+  "engineering" (list "ask-matt" "code-review" "codebase-design" "diagnosing-bugs" "domain-modeling" "grill-with-docs" "implement" "implement-spec" "improve-codebase-architecture" "pr" "prototype" "research" "retro" "setup-matt-pocock-skills" "tdd" "to-spec" "to-tickets" "triage" "wayfinder" "wizard")
+  "productivity" (list "grill-me" "grilling" "handoff" "teach" "to-questionnaire" "wait-what" "writing-for-agents") }}
+{{- range $category, $skills := $mattPocockSkills }}
+{{- range $skills }}
+
+.agents/skills/{{ . }}:
+  type: archive
+  url: https://github.com/mattpocock/skills/archive/refs/heads/main.tar.gz
+  stripComponents: 4
+  include: ["*/skills/{{ $category }}/{{ . }}/**"]
+  refreshPeriod: 168h
+{{- end }}
+{{- end }}

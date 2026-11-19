@@ -1,3 +1,8 @@
+---
+name: additive-telemetry-output
+description: When adding default log messages, metrics, or standardizing report formats — keep existing custom and derived telemetry alongside them.
+---
+
 # Additive Telemetry and Log Output
 
 - When adding default upstream log messages or standardizing report formats, keep existing custom metrics and precomputed derived logs intact.

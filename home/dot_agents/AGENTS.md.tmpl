@@ -5,14 +5,14 @@
 - Use the harness's question tool for implementation questions when available; otherwise ask in chat.
 - Leverage subagents, when available, to keep context clean.
 - If you need to do something temporary, that can be deleted anytime later, do this inside a `.tmp` folder of the current project
-- Think like a boyscout: Always leave the code more clean than when you found/ edited it
-- Always prioritize readability over pragmatism
+- Think like a boyscout: leave the code you touch cleaner than you found it, but keep cleanup inside the lines the change already edits
+- Always prioritize readability over cleverness
 
 ## Tool usage:
 - You are allowed to use almost any tool on the environment
 - Most projects will use [mise](https://mise.jdx.dev) to install software that is missing in the environment
 - Only write to files. Docker/Kubernetes/Kafka/Database/etc services should only be used to read from, never write to!
-- All changes require human review! Don't ever just commit, apply or edit without a human first approving this changes
+- All changes require human review! Never commit, deploy, or apply without a human approving the changes first. File edits need an approved goal; edits within that goal's scope (including fixes for failures blocking it) need no further approval
 
 ## Environment info (this computer)
 

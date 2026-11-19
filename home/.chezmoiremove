@@ -12,3 +12,10 @@
 .config/opencode/skills/go-interface-conformance/SKILL.md
 .config/opencode/skills/pulumi-resource-style/SKILL.md
 .config/opencode/skills/reread-before-rewrite/SKILL.md
+.agents/rules/one-sided-optional-booleans.md
+.agents/rules/additive-telemetry-output.md
+.agents/rules/mise-backend-artifact-verification.md
+.agents/rules/renovate-aws-version-pins.md
+.agents/rules/renovate-direct-extraction.md
+.agents/rules/renovate-mise-automerge.md
+.agents/skills/reread-before-rewrite

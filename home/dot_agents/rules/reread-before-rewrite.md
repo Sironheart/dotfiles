@@ -1,8 +1,3 @@
----
-name: reread-before-rewrite
-description: Before rewriting or fully overwriting an existing file — re-read it first; prefer targeted edits over wholesale rewrites.
----
-
 # Re-read before rewriting
 
 - Never do a full-file overwrite of an existing file the user may have touched since my last read. Re-read it first.
