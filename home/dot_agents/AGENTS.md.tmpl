@@ -4,17 +4,28 @@
 - **Verify with docs, don't assume**: when making factual claims (API behavior, config options, syntax, etc.), back them up with a link or excerpt from the actual documentation rather than relying on training-data memory.
 - Use the harness's question tool for implementation questions when available; otherwise ask in chat.
 - Leverage subagents, when available, to keep context clean.
+  - Use smaller and faster models for subagents and research; prefer the same or a comparable generation as the parent model.
+  - Select models explicitly through the harness's model catalog rather than inheriting the parent model. Ask before escalating if a smaller and faster model is unavailable or insufficient.
 - If you need to do something temporary, that can be deleted anytime later, do this inside a `.tmp` folder of the current project
 - Think like a boyscout: leave the code you touch cleaner than you found it, but keep cleanup inside the lines the change already edits
 - Always prioritize readability over cleverness
 
 ## Tool usage:
 - You are allowed to use almost any tool on the environment
-- Most projects will use [mise](https://mise.jdx.dev) to install software that is missing in the environment
+- Use the internet freely for task-related research, downloads, and verification. Download and install project dependencies and strictly required tools without further approval; ask before unrelated or optional installs.
+- Prefer mise for all developer tooling (Rust, Go, Node.js, pnpm, etc.); use the project's package manager for project dependencies. Follow existing manifests, lockfiles, pinned versions, and registry settings; preserve lockfiles unless dependency changes are part of the task.
+- For JavaScript dependency installs, disable lifecycle scripts by default using the package manager's supported controls. Inspect required scripts and explicitly allow only the packages that need them; ask before running suspicious or unclear scripts. Preserve existing script allowlists and dependency-age safeguards.
+- Keep credentials out of dependency execution: never pass tokens or secrets to install/build scripts unless explicitly required and approved. Avoid piping remote scripts into a shell; prefer pinned, verifiable artifacts from official sources. Do not bypass integrity failures or weaken security controls to make an install succeed.
 - Only write to files. Docker/Kubernetes/Kafka/Database/etc services should only be used to read from, never write to!
 - All changes require human review! Never commit, deploy, or apply without a human approving the changes first. File edits need an approved goal; edits within that goal's scope (including fixes for failures blocking it) need no further approval
 
 ## Environment info (this computer)
 
 - {{ if eq .chezmoi.os "darwin" }}macos{{ else }}linux{{ end }} with fish shell primarily used
-- prefer installation via mise over installation with brew, unless complexity is too high! Ask for any brew installation!
+- Ask before any Homebrew installation; prefer mise.
+{{ range glob (joinPath .chezmoi.sourceDir "dot_agents/rules/*.md") }}
+
+---
+
+{{ include . }}
+{{ end }}

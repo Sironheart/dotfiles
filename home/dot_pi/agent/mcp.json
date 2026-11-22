@@ -1,0 +1,12 @@
+{
+  "autoEnableCodemode": false,
+  "mcpServers": {
+    "mise": {
+      "command": "mise",
+      "args": ["mcp"],
+      "description": "Inspect mise command capabilities; installs and arbitrary task execution are unavailable.",
+      "exposure": "hidden",
+      "toolExposure": { "list_commands": "direct" }
+    }
+  }
+}

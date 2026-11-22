@@ -1,0 +1,11 @@
+{
+  "name": "pi-extensions",
+  "private": true,
+  "dependencies": {
+    "@gotgenes/pi-permission-system": "42.2.0",
+    "@gotgenes/pi-subagents": "25.0.5",
+    "@juicesharp/rpiv-ask-user-question": "2.15.0",
+    "@narumitw/pi-lsp": "0.49.12",
+    "pi-web-access": "0.48.0"
+  }
+}

@@ -1,0 +1,4 @@
+[tasks."pi:setup"]
+description = "Sync Pi extensions to the versions pinned in package.json"
+confirm = { message = "Sync the pinned Pi extensions?", default = "no" }
+run = 'npm install --prefix "$HOME/.local/share/pi-extensions" --ignore-scripts --legacy-peer-deps --no-audit --no-fund'

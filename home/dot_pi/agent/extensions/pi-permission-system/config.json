@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-packages/main/packages/pi-permission-system/schemas/permissions.schema.json",
+  "permission": {
+    "*": "deny",
+    "path": {
+      "*": "allow",
+      "~/.pi/agent/auth.json": "deny",
+      "~/.pi/agent/mcp-auth.json": "deny",
+      "~/.ssh/*": "deny"
+    },
+    "path_write": {
+      "*": "allow",
+      ".git": "deny",
+      ".git/*": "deny",
+      "*/.git": "deny",
+      "*/.git/*": "deny",
+      ".pi/*": "deny",
+      "*/.pi/*": "deny",
+      "~/.agents/*": "deny",
+      "~/.local/share/pi-extensions/*": "deny",
+      "~/.local/share/mise/*": "deny"
+    },
+    "external_directory_read": {
+      "*": "ask",
+      "~/.agents/*": "allow",
+      "~/.local/share/pi-extensions/*": "allow"
+    },
+    "external_directory_write": "ask",
+    "read": "allow",
+    "grep": "allow",
+    "find": "allow",
+    "ls": "allow",
+    "write": "allow",
+    "edit": "allow",
+    "skill": "allow",
+    "ask_user_question": "allow",
+    "subagent": "allow",
+    "get_subagent_result": "allow",
+    "steer_subagent": "allow",
+    "ask_parent": "allow",
+    "notify_parent": "allow",
+    "web_search": "allow",
+    "fetch_content": "allow",
+    "get_search_content": "allow",
+    "source_check": "allow",
+    "lsp_diagnostics": "allow",
+    "lsp_fix": "allow",
+    "codemode": "allow",
+    "mcp": { "*": "deny", "mise:list_commands": "allow" },
+    "bash": "allow"
+  }
+}

@@ -1,6 +1,7 @@
 ---
 name: typescript-style
-description: When writing TypeScript/JavaScript — transform collections with map/flatMap/filter/reduce pipelines instead of loops, and type optional flags with a clear default as one-sided `?: true` / `?: false`.
+description: >-
+  When writing TypeScript/JavaScript — transform collections with map/flatMap/filter/reduce pipelines instead of loops, and type optional flags with a clear default as one-sided `?: true` / `?: false`.
 ---
 
 # TypeScript style

@@ -1,0 +1,14 @@
+{
+  "workflow": "none",
+  "toolActivation": "eager",
+  "webSearch": { "allowedProviders": ["openai", "exa"] },
+  "allowBrowserCookies": false,
+  "githubClone": { "enabled": false },
+  "githubPrIssue": { "enabled": false },
+  "fetch": { "allowedModes": ["readable", "raw"] },
+  "fetchRouting": { "allowRemoteHostedProviders": false },
+  "image": { "enabled": false },
+  "youtube": { "enabled": false },
+  "video": { "enabled": false },
+  "pdf": { "enabled": false }
+}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": ["~/.agents/AGENTS.md", "~/.agents/rules/*.md"],
+  "instructions": ["~/.agents/AGENTS.md"],
   "update": "disable",
   "plugins": [
     {

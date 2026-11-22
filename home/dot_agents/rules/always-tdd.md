@@ -1,11 +1,11 @@
-# Test-driven development (project code)
+# Test-driven development (project-owned code logic)
 
-- For **project** behavior changes (domain logic, API, DB, UI contracts, app refactors that alter outcomes): **red → green → refactor**.
+- Write tests only for logic implemented by this project's code: decisions, transformations, validation, and error handling. Each test must catch a bug in that logic, not prove that a dependency works.
+- For changes to that logic: **red → green → refactor**.
 - Write or extend a **failing test first**. Do not implement production code until that failure is observed (or clearly would fail if run).
 - Do **not** treat TDD as optional, “later”, or limited to smoke/health/bootstrap paths.
-- Prefer the lowest useful test: unit where pure; integration (e.g. testcontainers) where I/O/boundaries matter.
-- Green before expanding scope. No drive-by features without tests.
-- **Skip TDD** for repo scaffolding around the app: mise tasks, shell glue, Docker/compose wiring, docs, pure renames, generated noise — unless that glue embeds product behavior worth asserting.
+- Prefer the lowest useful test: unit for pure logic; integration when project-owned logic crosses I/O boundaries. Assert the project's decisions and outcomes, not the dependency's contract.
+- Green before expanding the logic change's scope.
 
 ## Existing tests are given
 
@@ -29,9 +29,12 @@ EnableShellCompletion: true,
 ConfigureShellCompletionCommand: func(c *cli.Command) { c.Hidden = false },
 ```
 
-## No tests for plain data types
+## Outside test scope
 
-- Do not write tests whose subject is a struct/model definition (`type Foo struct`, DTOs, records): JSON round trips, field-layout snapshots, serialization fixtures, "decodes record X" tables.
-- Test behaviour that uses the types (store, handler, client logic). Models are covered through those tests.
-- Do not add JSON fixture files or `testdata/` golden files for models. When removing such fixtures, delete the model tests too; do not inline them.
-- Exception: the user explicitly asks for a serialization/compatibility test.
+- Binaries: installation, executable presence, startup, version/help output, and packaged artifacts.
+- Structs, models, DTOs, and records: field layouts, serialization round trips, and data-definition fixtures or snapshots. Test project logic that uses them instead.
+- Configuration and declarative wiring: settings, manifests, templates, task definitions, Docker/compose wiring, and infrastructure declarations.
+- Frameworks and libraries: their documented behavior, built-in validation, serialization, routing, lifecycle, and other functionality they own. Using a dependency in a test of project logic is fine; making the dependency the test subject is not.
+- Docs, pure renames, generated files, and scaffolding without project-owned logic.
+
+Use existing builds, typechecks, parsers, schema validators, and checks for these changes instead of adding custom tests. If a script or configuration embeds real code logic, test only that logic.

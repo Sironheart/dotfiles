@@ -1,0 +1,14 @@
+{{- $manifest := include "dot_local/share/pi-extensions/package.json" | mustFromJson -}}
+{{- $packages := list -}}
+{{- range keys $manifest.dependencies | sortAlpha -}}
+  {{- $packages = append $packages (printf "~/.local/share/pi-extensions/node_modules/%s" .) -}}
+{{- end -}}
+{
+  "$schema": "https://pi.dev/schemas/settings.schema.json",
+  "defaultProvider": "openai-codex",
+  "defaultProjectTrust": "never",
+  "defaultTools": ["read", "bash", "edit", "write", "grep", "find", "ls", "codemode"],
+  "npmCommand": ["false"],
+  "selfUpdateCommand": ["false"],
+  "packages": {{ $packages | mustToPrettyJson | indent 2 | trim }}
+}
