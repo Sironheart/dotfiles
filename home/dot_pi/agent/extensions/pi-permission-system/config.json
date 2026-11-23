@@ -16,15 +16,11 @@
       "*/.git/*": "deny",
       ".pi/*": "deny",
       "*/.pi/*": "deny",
-      "~/.agents/*": "deny",
-      "~/.local/share/pi-extensions/*": "deny",
-      "~/.local/share/mise/*": "deny"
+      "~/.agents/*": "ask",
+      "~/.local/share/pi-extensions/*": "ask",
+      "~/.local/share/mise/*": "ask"
     },
-    "external_directory_read": {
-      "*": "ask",
-      "~/.agents/*": "allow",
-      "~/.local/share/pi-extensions/*": "allow"
-    },
+    "external_directory_read": "allow",
     "external_directory_write": "ask",
     "read": "allow",
     "grep": "allow",

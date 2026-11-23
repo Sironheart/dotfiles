@@ -1,4 +1,7 @@
 {{- if eq .chezmoi.os "darwin" }}
+tap "libracoder/kiri", trusted: {
+  formula: "kiri",
+}
 
 {{ if contains .workspace "private" -}}
 cask "orcaslicer"
@@ -20,11 +23,13 @@ cask "microsoft-teams"
 cask "slack"
 {{- end }}
 
+brew "docker-credential-helper"
 brew "fish"
 brew "gnupg"
 brew "imagemagick"
 brew "mole"
 brew "mise"
+brew "openssl@3"
 brew "wget"
 
 cask "1password"
@@ -33,7 +38,8 @@ cask "elgato-camera-hub"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
-cask "orbstack"
+cask "libracoder/kiri/kiri"
+# cask "orbstack"
 cask "raycast"
 cask "spotify"
 cask "vorssaint"
