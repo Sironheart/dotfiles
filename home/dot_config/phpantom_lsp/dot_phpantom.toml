@@ -1,0 +1,16 @@
+#:schema https://raw.githubusercontent.com/PHPantom-dev/phpantom_lsp/main/config-schema.json
+
+[diagnostics]
+unresolved-member-access = true
+extra-arguments = true
+magic-properties = true
+partial-union-members = true
+possibly-empty-mismatches = true
+unhandled-exceptions = true
+unused-parameters = true
+
+[indexing]
+strategy = "composer"
+
+[formatting]
+enabled = false
